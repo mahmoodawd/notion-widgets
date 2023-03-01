@@ -12,6 +12,8 @@ const voiceSelect = document.querySelector('#voice-select');
 let voices = [];
 
 const getVoices = () => {
+    synth.lang = 'en-US';
+    synth.name = 'Google US English';
     voices = synth.getVoices();
     //loop through voices and create an option for each one
     voices.forEach(voice => {
